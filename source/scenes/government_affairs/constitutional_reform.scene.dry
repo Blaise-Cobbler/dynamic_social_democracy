@@ -34,7 +34,7 @@ A constitutional reform requires either a two-thirds supermajority in the Reichs
 @vote_threshold
 subtitle: Change the vote threshold to 5% for parties to be represented in the Reichstag.
 on-arrival: {!
-Q.reform_support = Q.spd_normalized;
+Q.reform_support = Q.spd_normalized + Q.ddp_normalized + Q.dvp_normalized + Q.nsdap_normalized;
 if (Q.z_relation > 30) {
     Q.reform_support += Q.z_normalized - 0.03;
 }
