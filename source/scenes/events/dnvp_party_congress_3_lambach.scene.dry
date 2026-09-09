@@ -23,15 +23,15 @@ if (Q.welfare <= 0) {
 if (Q.lambach_points >= 0) Q.lambach_trigger = 1;
 
 if (Q.lambach_points < 3 && (Q.land_reform >= 1 || Q.rural_spd_normalized >= 30 || Q.rural_nsdap_normalized >= (Q.rural_dnvp_normalized + 10))) {
-    Q.schiele_trigger = 1;
+    Q.schiele_trigger = 0;
 }
 
 if (Q.lambach_points < 3 && Q.pro_republic < ((Q.nsdap_votes + Q.dnf_votes + Q.kpd_votes)*2)) {
-    Q.westarp_trigger = 1;
+    Q.westarp_trigger = 0;
 }
 
 if (Q.lambach_points < 3 && !Q.westarp_trigger && !Q.schiele_trigger) {
-    Q.westarp_trigger = 1;
+    Q.westarp_trigger = 0;
 }
 
 !}
