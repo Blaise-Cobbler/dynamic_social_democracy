@@ -78,7 +78,7 @@ subtitle: Votes of no confidence can only be called if an alternative plan for g
 on-arrival: {!
 Q.reform_support = Q.spd_normalized + Q.ddp_normalized + Q.dvp_normalized;
 if (Q.z_relation >= 30) {
-    Q.reform_support += Q.z_normalized - 0.03;
+    Q.reform_support += Q.z_normalized;
 }
 !}
 view-if: constructive_vonc = 0
