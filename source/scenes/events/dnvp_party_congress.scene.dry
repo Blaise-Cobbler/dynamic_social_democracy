@@ -35,7 +35,7 @@ on-arrival: {!
   if (Q.in_right_coalition_prussia && Q.in_right_coalition) {Q.dnvp_balance += 1;}
   if (Q.dnvp_civility < 0 || !(Q.in_right_coalition || Q.in_right_coalition_prussia)) {Q.dnvp_excluded = 1;}
   
-  if ((Q.dnvp_balance >= 2 && (Q.pro_republic_7 >= 65 || !Q.dnvp_excluded)) || Q.tariffs < 0) {Q.hergt_win = 1;}
+  if ((Q.dnvp_balance >= 2 || (Q.pro_republic_7 >= 65 || !Q.dnvp_excluded)) || Q.tariffs < 0) {Q.hergt_win = 1;}
   if ((Q.dnvp_balance <= -2 && (Q.pro_republic_7 < 65 || Q.dnvp_excluded)) && Q.tariffs >= 0) {Q.hugenberg_win = 1;}
   if (!(Q.hergt_win || Q.hugenberg_win)) {Q.triumvirate_win = 1;}
 !}  
