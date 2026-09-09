@@ -13,7 +13,7 @@ if (!Q.in_grand_coalition) {
 
 if (Q.dvp_right > (Q.dvp_left*1.5) || (Q.dvp_right > (Q.dvp_left + 4))) {
     Q.dvp_ideology = "Right"
-} else if (Q.dvp_left > (Q.dvp_right*1.5) || (Q.dvp_left > (Q.dvp_right + 4))) {
+} else if (Q.dvp_left > (Q.dvp_right*1.5) || (Q.dvp_left > (Q.dvp_right))) {
     Q.dvp_ideology = "Left"
 } else {
     Q.dvp_ideology = "Moderate"
