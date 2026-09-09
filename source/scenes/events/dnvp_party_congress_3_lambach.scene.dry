@@ -20,7 +20,7 @@ if (Q.welfare <= 0) {
     Q.workers_dnvp += 3;
 }
 
-if (Q.lambach_points >= 3) Q.lambach_trigger = 1;
+if (Q.lambach_points >= 0) Q.lambach_trigger = 1;
 
 if (Q.lambach_points < 3 && (Q.land_reform >= 1 || Q.rural_spd_normalized >= 30 || Q.rural_nsdap_normalized >= (Q.rural_dnvp_normalized + 10))) {
     Q.schiele_trigger = 1;
