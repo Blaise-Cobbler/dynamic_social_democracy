@@ -77,7 +77,7 @@ We have passed a constitutional amendment to increase the electoral threshold to
 subtitle: Votes of no confidence can only be called if an alternative plan for government formation can be passed, greatly reducing their incidence.
 on-arrival: {!
 Q.reform_support = Q.spd_normalized + Q.ddp_normalized;
-if (Q.z_relation >= 50) {
+if (Q.z_relation >= 30) {
     Q.reform_support += Q.z_normalized - 0.03;
 }
 if (!Q.stresemann_dead) {
@@ -103,7 +103,7 @@ We have successfully passed a constitutional amendment to ban votes of no confid
 subtitle: The president can no longer dissolve the Reichstag at will, or call a <i>Reichsexekution</i> on state governments.
 on-arrival: {!
 Q.reform_support = Q.spd_normalized + Q.ddp_normalized + Q.kpd_normalized + (Q.lvp_normalized / 1);
-if (Q.z_relation > 45 && (Q.president == "Hindenburg" || Q.president_ideology == "Moderate")) {
+if (Q.z_relation > 35 && (Q.president == "Hindenburg" || Q.president_ideology == "Moderate")) {
     Q.reform_support += Q.z_normalized;
     Q.z_support_reform = 1;
 } else if (Q.president_ideology == "Left" || Q.z_relation > 55 && !(Q.president == "Hindenburg" || Q.president_ideology == "Moderate")) {
